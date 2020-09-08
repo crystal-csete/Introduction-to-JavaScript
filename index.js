@@ -134,10 +134,16 @@ console.log(`${inches} inches is equal to ${centimeters} centimeters.`)
 // the function should take a starting number as an argument and count down - at each iteration it should log (number) bottles of soda on the wall, (number) bottles of soda, take one down pass it around (number left over) bottles of soda on the wall`
   
 
-  
 
+for ( let i = 99; i > 1; i--) {
+    console.log(i + " bottles of soda on the wall,");
+    console.log(i + " bottles of soda,");
+    console.log(i + " take one down, pass it around, ");
+    console.log( ( i - 1) + " bottles of soda,");
+    console.log("no more bottles of soda.")
+}
 
-
+ 
 
 
 
@@ -151,28 +157,31 @@ console.log(`${inches} inches is equal to ${centimeters} centimeters.`)
 //and anything below 60 should be F
   
 
-function gradesForYou() {
-    for ( let i = 100; i > 0; i++){
+let grades = 85;
+let letter;
 
-   
-    if ( i >=90) {
-        return "A";
+   function grading(grades) {
+       for (let i=100; i < 0; i++) {
+
+      
+    if ( grades >=90) {
+        letter = "A";
     }
-    else if ( i >=80) {
-        return "B";
+    else if ( grades >=80) {
+        letter = "B";
     }
-    else if ( i >=70) {
-        return "C";
+    else if ( grades >=70) {
+        letter = "C";
     }
-    else if ( i >=60) {
-        return "D";
+    else if ( grades >=60) {
+        letter = "D";
     }
     else {
-        return "F";
+        letter = "F";
     }
+ }
 }
-  }
-console.log(gradesForYou);
+console.log(grading(grades));
 
   
 
