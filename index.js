@@ -14,21 +14,24 @@ if (votingAge >= 18) {
 
 //Task b: declare a variable and then use a conditional to change the value of that variable based on the value assigned to a second variable (no function required)
 
-let thisIdea = "testing";
 
-console.log(thisIdea);
-
-thisIdea = "this thing";
-
-console.log(thisIdea);
  
+let beforeVar = 6;
+if ( afterVar = 8) {
+    beforeVar = afterVar;
+}
+console.log(beforeVar);
+
 
 
 //Task c: Convert string ("1999") to integer (1999)  (no function required) // hint look up the Number method
 
 
 
-console.log(Number("1999"));
+let strToNum = new Number("1999");
+console.log(strToNum);
+
+
 
 
 //Task d: Write a function to multiply a*b 
@@ -71,10 +74,37 @@ convertedAge(36);
 // 7 - 12 months 4% of their body weight
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
-  
 
+let age;
+let weight;
 
+function feeds(age, weight) {
 
+if (age === 1 && weight > 15 ) {
+    return 16 * .02 + " is the percent of food to be eaten";
+}else if ( age ===1 && weight >= 11 && weight <= 15 ) {
+    return 15 *  .03 + " is the percent of food to be eaten";
+}else if ( age ===1 && weight >= 6 && weight <= 10 ) {
+    return 10 *  .04 + " is the percent of food to be eaten";
+}else if ( age ===1 && weight <= 5 && weight > 0 ) {
+    return 5 *  .05 + " is the percent of food to be eaten";
+}
+}
+console.log(feeds(1, 15));
+
+let pupAge;
+
+function puppyFeeder(pupAge) {
+ if ( pupAge >= 2 && pupAge <= 4 ) {
+    return .10 * 100 + " is the percent of food to be eaten";
+}else if ( pupAge >= 5 && pupAge <= 6 ) {
+    return .05 * 100 + " is the percent of food to be eaten";
+}else if ( pupAge >= 7 && pupAge <= 12 ) {
+    return .04 * 100 + " is the percent of food to be eaten";
+}
+}
+
+console.log(puppyFeeder(5))
 
 
 
@@ -89,14 +119,15 @@ convertedAge(36);
 let computer = Math.random();
 
 function randomChoice() {
+    
     if ( computer <= .33) {
-        return "rocks";
+        return "rock covers paper, you won!";
     }
     else if ( computer <= .66) {
-        return "paper";
+        return "paper covers rock, you won!";
     }
     else if ( computer >= .67) {
-        return "scissors";
+        return "scissor cuts paper, you won!";
     }
 }
 
@@ -135,16 +166,13 @@ console.log(`${inches} inches is equal to ${centimeters} centimeters.`)
   
 
 
-for ( let i = 99; i > 1; i--) {
+for ( let i = 99; i > 0; i--) {
+
     console.log(i + " bottles of soda on the wall,");
-    console.log(i + " bottles of soda,");
     console.log(i + " take one down, pass it around, ");
     console.log( ( i - 1) + " bottles of soda,");
-    console.log("no more bottles of soda.")
-}
 
- 
-
+    }
 
 
 /************************************************************** Task 7 **************************************************************/
@@ -156,32 +184,32 @@ for ( let i = 99; i > 1; i--) {
 //60s should be D 
 //and anything below 60 should be F
   
+// let grade = 75;  //// you can change this to input the number grade for different results
 
-let grades = 85;
-let letter;
+let grade = Math.floor(Math.random() * 100)
 
-   function grading(grades) {
-       for (let i=100; i < 0; i++) {
+   function grading(grade) {
+    
 
-      
-    if ( grades >=90) {
-        letter = "A";
+    if ( grade >= 90) {
+        return  "A";
     }
-    else if ( grades >=80) {
-        letter = "B";
+    else if ( grade >= 80) {
+       return  "B";
     }
-    else if ( grades >=70) {
-        letter = "C";
+    else if ( grade >= 70) {
+        return  "C";
     }
-    else if ( grades >=60) {
-        letter = "D";
+    else if ( grade >= 60) {
+          return  "D";
     }
     else {
-        letter = "F";
-    }
+         return  "F";
+    } 
  }
-}
-console.log(grading(grades));
+
+console.log(grading(grade));
+
 
   
 
