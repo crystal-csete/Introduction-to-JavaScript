@@ -17,7 +17,8 @@ if (votingAge >= 18) {
 
  
 let beforeVar = 6;
-if ( afterVar = 8) {
+let afterVar = 8;
+if ( afterVar === 8) {
     beforeVar = afterVar;
 }
 console.log(beforeVar);
@@ -75,36 +76,45 @@ convertedAge(36);
 
 // when you are finished invoke your function with the weight of 15 lbs and the age of 1 year - if your calculations are correct your result should be 0.44999999999999996
 
-let age;
-let weight;
+let age = 20;
+let weight = 30;
 
-function feeds(age, weight) {
+function feeds(age, weight){
+if (age >= 1)
 
-if (age === 1 && weight > 15 ) {
-    return 16 * .02 + " is the percent of food to be eaten";
-}else if ( age ===1 && weight >= 11 && weight <= 15 ) {
-    return 15 *  .03 + " is the percent of food to be eaten";
-}else if ( age ===1 && weight >= 6 && weight <= 10 ) {
-    return 10 *  .04 + " is the percent of food to be eaten";
-}else if ( age ===1 && weight <= 5 && weight > 0 ) {
-    return 5 *  .05 + " is the percent of food to be eaten";
+if (weight > 15 )
+    console.log(weight * 0.02);
+
+else if (weight >= 11 && weight <= 15 ) 
+    console.log(weight * 0.03);
+
+else if (weight >= 6 && weight <=10 ) 
+    console.log(weight * 0.04);
+
+else if (weight >= 1 && weight <= 5 )
+    console.log(weight * 0.05);
+
+else (age < 1 )
+
+if (age >= 0.2 && age <= 0.4 )
+    console.log(0.10);
+
+else if (age > 0.4 && age <= 0.7 )
+    console.log(0.05);
+
+else if (age > 0.7 && age < 1 )
+    console.log(0.04);
+
 }
-}
+
+
+
 console.log(feeds(1, 15));
 
-let pupAge;
 
-function puppyFeeder(pupAge) {
- if ( pupAge >= 2 && pupAge <= 4 ) {
-    return .10 * 100 + " is the percent of food to be eaten";
-}else if ( pupAge >= 5 && pupAge <= 6 ) {
-    return .05 * 100 + " is the percent of food to be eaten";
-}else if ( pupAge >= 7 && pupAge <= 12 ) {
-    return .04 * 100 + " is the percent of food to be eaten";
-}
-}
 
-console.log(puppyFeeder(5))
+
+
 
 
 
